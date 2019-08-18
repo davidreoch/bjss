@@ -17,9 +17,10 @@ public class AppleDiscountOp implements DiscountOp {
         double savings = 0;
 
         for (Item item : basket.getItemList()) {
-            if (item.getClass().equals(Apples.class)) {
+            if (item.getName().equalsIgnoreCase("Apples")) {
                 double newPrice = item.getPrice() * 0.9;
                 savings += (item.getPrice() - newPrice);
+                savings = round(savings, 1);
                 item.setPrice(newPrice);
             }
         }
@@ -31,5 +32,11 @@ public class AppleDiscountOp implements DiscountOp {
             return new DiscountTransaction("Apples 10% off -", String.format("%.2f", savings));
         }
 
+    }
+
+    @Override
+    public double round(double value, int precision) {
+        int scale = (int) Math.pow(10, precision);
+        return (double) Math.round(value * scale) / scale;
     }
 }

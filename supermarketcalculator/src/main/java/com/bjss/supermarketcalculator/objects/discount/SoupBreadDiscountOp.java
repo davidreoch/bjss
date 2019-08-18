@@ -42,4 +42,10 @@ public class SoupBreadDiscountOp implements DiscountOp {
 
         return new DiscountTransaction("Buy 2 tins of soup and get a loaf of bread for half price -", String.format("%.2f", savings));
     }
+
+    @Override
+    public double round(double value, int precision) {
+        int scale = (int) Math.pow(10, precision);
+        return (double) Math.round(value * scale) / scale;
+    }
 }

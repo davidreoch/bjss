@@ -28,7 +28,11 @@ public class Main {
         if (args.length > 0 && (args[0].equals("PriceBasket"))) {
             for (int i = 1; i < args.length; i++) {
                 Item item = itemFactory.getItem(args[i]);
-                basket.addItem(item);
+                if (item != null) {
+                    basket.addItem(item);
+                }else{
+                    System.out.println("Error: item " + args[i] + " is not supported!");
+                }
             }
         }
         else {

@@ -16,4 +16,6 @@ public interface DiscountOp {
     
     DiscountTransaction applyDiscountOp(final Basket basket);
     
+    double round (double value, int precision);
+    
 }
