@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.bjss.supermarketcalculator.runner;
 
 import com.bjss.supermarketcalculator.objects.Apples;
@@ -17,21 +12,20 @@ import com.bjss.supermarketcalculator.objects.Soup;
  */
 public class ItemFactory {
 
-    //use getItem method to get object of type shape 
-    public Item getItem(String shapeType) {
-        if (shapeType == null) {
+    public Item getItem(String itemType) {
+        if (itemType == null) {
             return null;
         }
-        if (shapeType.equalsIgnoreCase("BREAD")) {
+        if (itemType.equalsIgnoreCase("BREAD")) {
             return new Bread();
         }
-        else if (shapeType.equalsIgnoreCase("MILK")) {
+        else if (itemType.equalsIgnoreCase("MILK")) {
             return new Milk();
         }
-        else if (shapeType.equalsIgnoreCase("SOUP")) {
+        else if (itemType.equalsIgnoreCase("SOUP")) {
             return new Soup();
         }
-        else if (shapeType.equalsIgnoreCase("APPLES")){
+        else if (itemType.equalsIgnoreCase("APPLES")){
             return new Apples();
         }
 
