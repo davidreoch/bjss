@@ -3,7 +3,7 @@ package com.bjss.supermarketcalculator.objects;
 import java.util.List;
 
 /**
- *
+ * Class which sums the values of a basket of items
  * @author David Reoch
  */
 public class PriceBasket extends Basket{

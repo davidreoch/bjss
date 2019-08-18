@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.bjss.supermarketcalculator.objects.discount;
 
-import com.bjss.supermarketcalculator.objects.Apples;
 import com.bjss.supermarketcalculator.objects.Basket;
 import com.bjss.supermarketcalculator.objects.Item;
 import java.util.Arrays;
@@ -15,7 +9,7 @@ import org.junit.Test;
 import org.junit.Before;
 
 /**
- *
+ * Class to test the AppleDiscountOp 
  * @author David Reoch
  */
 public class AppleDiscountOpTest {

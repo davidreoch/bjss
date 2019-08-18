@@ -12,6 +12,11 @@ import com.bjss.supermarketcalculator.objects.Soup;
  */
 public class ItemFactory {
 
+    /**
+     * factory method to return different types of item
+     * @param itemType the string type of the item
+     * @return return the concrete class 
+     */
     public Item getItem(String itemType) {
         if (itemType == null) {
             return null;

@@ -17,6 +17,10 @@ import java.util.Set;
  */
 public class Main {
 
+    /**
+     * The main program loop
+     * @param args The input items array
+     */
     public static void main(String[] args) {
         final ItemFactory itemFactory = new ItemFactory();
         final BasketFactory basketFactory = new BasketFactory();
